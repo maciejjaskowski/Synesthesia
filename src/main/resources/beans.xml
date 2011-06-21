@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+						http://www.springframework.org/schema/context
+         				http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+         				
+	<context:annotation-config/>
+	
+	<bean id="readerFactory" class="jaskowski.tools.ReaderFactory"/>
+	
+	
+	
+	<bean id="springGraph" class="foo.AutowiringSpringGraph" scope="prototype">
+		<constructor-arg>
+			<bean id="myReader" class="jaskowski.tools.ReaderFactory" factory-method="fileReader" scope="prototype">
+<!-- 			<constructor-arg value="transactionRunner.log"/> -->
+			<constructor-arg value="GlobalServiceTest.log"/>
+<!-- 				<constructor-arg value="self0.log"/> -->
+<!-- 				<constructor-arg value="complex3.log" /> -->
+			</bean>	 
+		 </constructor-arg>
+		 <constructor-arg>
+		 	<bean id="vertexFactory" class="foo.VertexFactoryImpl"/>
+		 </constructor-arg>
+	</bean>
+	<bean id="springGraphViz" class="foo.SpringGraphViz" scope="prototype"/>
+	
+
+</beans>
