@@ -21,7 +21,7 @@ import edu.uci.ics.jung.graph.DirectedSparseGraph;
 public class GUIFactoryTest {
 
 	@Test
-	public void test(){
+	public void test() throws InterruptedException{
 		
 		SpringGraphVisualization graph = new SpringGraphVisualization(new ExtendedVisualizationViewer(new FRLayout(new DirectedSparseGraph()), new Dimension(800,500)), null);		
 		
@@ -35,5 +35,6 @@ public class GUIFactoryTest {
 		//stub(vControllerMock.addColor((Map) Mockito.anyObject(), (Color) Mockito.anyObject(), Mockito.anyInt()));
 		
 		GUIFactory.createSpringGUI( graph, gControllerMock, vControllerMock, VerticesRepository.getInstance());
+		Thread.sleep(8000);
 	}
 }
