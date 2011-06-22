@@ -45,8 +45,8 @@ v.setBeanName("CurrentlySelected");
 import java.awt.Color;
 import org.synesthesia.spring.SpringVertex;
 Set<SpringVertex> cur = (HashSet<SpringVertex>) selected.getVertices()
-Set<SpringVertex> gain = gController.getGain(cur)
-graph = graph.substituteWith(gain, v)
+System.out.println(cur)
+graph = graph.substituteWith(cur, v)
 vv.getGraphLayout().setGraph(graph)
 vv.repaint()
 

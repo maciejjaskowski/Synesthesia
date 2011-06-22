@@ -3,6 +3,7 @@ package org.synesthesia.controller;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
@@ -96,13 +97,14 @@ public class GraphController<V,E extends EdgeWithMultiplicity> {
 	
 	public Set<V> getFathersOf(Set<V> sons){
 		Set<V> result = new HashSet<V>();
-		try{
-			return result;
-		} finally{
-			for(V v : sons){
-				result.addAll(currentGraph.get().getPredecessors(v));
+		for(V v : sons){
+			Collection<V> predecessors  = currentGraph.get().getPredecessors(v);
+			if(predecessors != null){
+				result.addAll(predecessors );
+				
 			}
 		}
+		return result;
 	}
 	
 	public Set<V> getRoots(){
