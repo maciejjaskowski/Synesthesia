@@ -2,14 +2,13 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>graph-creator</groupId>
-  <artifactId>graph-creator</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <groupId>synesthesia</groupId>
+  <artifactId>synesthesia</artifactId>
+  <version>0.0.1</version>
   <packaging>jar</packaging>
   
 
-  <name>graph-creator</name>
-  <url>http://maven.apache.org</url>
+  <name>synesthesia</name>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -20,7 +19,7 @@
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>3.8.1</version>
+      <version>4.8.1</version>
       <scope>test</scope>
       </dependency>
       <dependency>
@@ -81,6 +80,12 @@
 <dependency>
     <groupId>net.sf.jung</groupId>
     <artifactId>jung-jai</artifactId>
+    <version>2.0.1</version>
+</dependency>
+
+<dependency>
+    <groupId>net.sf.jung</groupId>
+    <artifactId>jung-samples</artifactId>
     <version>2.0.1</version>
 </dependency>
 
