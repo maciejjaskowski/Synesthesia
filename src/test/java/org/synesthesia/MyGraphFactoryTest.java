@@ -4,6 +4,7 @@ import static org.junit.Assert.assertEquals;
 
 import java.util.LinkedList;
 
+import org.junit.Ignore;
 import org.junit.Test;
 import org.synesthesia.MyGraphFactory;
 
@@ -44,6 +45,7 @@ public class MyGraphFactoryTest {
 			new String[]{"SyncronWebService","src",       "com.syncron.bpe.transfer.dtoentity.item.ItemDTO",                                  "com.syncron.bpe.core.transfer.dtoentity.DTOEntityWithVersionHistory"},
 			new String[]{"SyncronBusinessFoundation","src","se.sync.tre.mp.TrMpAdr03",                                                        "java.util.Properties"},
 	};
+	@Ignore
 	@Test
 	public void test() throws Throwable{
 		LinkedList<Throwable> errors = new LinkedList<Throwable>();
